@@ -1,0 +1,277 @@
+.about-packages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .button {
+      padding: 10px 30px;
+      text-decoration: none;
+      font-size: 1.4em;
+      margin: 15px 15px;
+      border-radius: 50px;
+      color: #f4f4f4;
+      transition: all 0.3s ease 0s;
+    }
+    
+    .button:hover {
+      transform: scale(1.2);
+    }
+    
+    .button1 {
+      background-color: #00cc99;
+      box-shadow: 0 0 10px 0 #00cc99 inset, 0 0 20px 2px #00cc99;
+    }
+    
+    .button2 {
+      background-color: #ff007c;
+      box-shadow: 0 0 10px 0 #ff007c inset, 0 0 20px 2px #ff007c;
+    }
+    
+    .button3 {
+      background-color: #ffae42;
+      box-shadow: 0 0 10px 0 #ffae42 inset, 0 0 20px 2px #ffae42;
+    }
+    
+}
+
+.packages{
+    display: flex;
+    flex-direction: row;
+}
+
+.package {
+    background-color: #7f8381;
+    border-radius: 20px;
+    box-shadow: 0 19px 38px #434343, 0 15px 12px rgba(30, 35, 33, .2);
+    color: #f4f4f4;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding-bottom: 1.5em;
+    text-align: center;
+    width: 300px;
+    position: relative;
+  }
+
+  .pricing-package--heading{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .package:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .heading h3 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .description p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .features .checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+  }
+  
+  .features .item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .features .icon-check {
+    color: #4caf50;
+    margin-right: 10px;
+  }
+
+  .toggle-checklist{
+    background: var(--white);
+    border: 0px solid var(--lighter-black);
+    border-radius: 40px;
+    width: 25px;
+    height: 25px;
+  }
+  
+  .features .has-sublist .toggle-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 5px 0;
+  }
+  
+  .features .has-sublist .icon-plus {
+    margin-right: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .features .sub-checklist {
+    list-style: circle;
+    margin-left: 20px;
+    display: none;
+  }
+  
+  .price {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .price b {
+    font-size: 2rem;
+    color: #007bff;
+  }
+  
+  .price i {
+    font-size: 0.85rem;
+    color: #888;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  .actions {
+    text-align: center;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin-right: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .btn-link {
+    color: #007bff;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s;
+  }
+  
+  .btn-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+
+  .checklist{
+    display: block;
+    text-align: left;
+    list-style: disc;
+  }
+
+  .sub-checklist{
+    list-style: circle;
+    margin-left: 15px;
+  }
+
+  .pricing-package{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-option-toggl-container{
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media(min-width: 750px){
+    .pricing-option-toggl-container, .toggle-checklist {
+        display: none; 
+    }    
+
+    .all-packages{
+        display: flex;
+    }
+
+    .package{
+        width: 200px;    
+        justify-content: center;
+
+        .button{
+            font-size: 1.5rem;
+        }
+    }
+
+    .checklist{
+        display: block !important;
+    }
+
+    .button{
+        position: absolute;
+        bottom: 0;
+    }
+
+    .package{
+        min-height: 550px;
+    }
+  }
+
+@media (max-width: 1000px) {
+    .all-packages {
+        display: block;
+    }
+}
+  
+  /* Responsive Design */
+  @media (max-width: 750px) {
+    .package{
+        min-height: 350px;
+    }
+
+    .pricing-option-toggl-container, .toggle-checklist {
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+        gap: 10px;
+    }  
+
+    .packages {
+        flex-direction: column;
+    }
+
+    .package {
+        padding: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .heading h3 {
+      font-size: 1.6rem;
+    }
+  
+    .price b {
+      font-size: 1.8rem;
+    }
+  
+    .btn-primary, .btn-link {
+      font-size: 0.9rem;
+    }
+  }
+  

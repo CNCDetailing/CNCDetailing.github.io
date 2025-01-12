@@ -40,6 +40,13 @@ gulp.task('copy-maincss', function() {
         .pipe(gulp.dest('docs'));
 });
 
+gulp.task('copy-pricing-css', function() {
+    return gulp.src('pricing.css')
+        .pipe(postcss([cssnano()]))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('docs'));
+});
+
 // Copy assets
 gulp.task('copy-assets', function() {
     return gulp.src('assets/**/*')
@@ -66,4 +73,4 @@ gulp.task('watch', function() {
 });
 
 // Default Task
-gulp.task('default', gulp.series('copy-html', 'copy-main', 'copy-css', 'copy-maincss', 'copy-assets', 'connect', 'watch'));
+gulp.task('default', gulp.series('copy-html', 'copy-main', 'copy-pricing-css', 'copy-css', 'copy-maincss', 'copy-assets', 'connect', 'watch'));
