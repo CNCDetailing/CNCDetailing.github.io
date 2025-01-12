@@ -1,110 +1,155 @@
-/* Base styling */
-.pricing-package {
-    background-color: var(--plan-background-color, #f9f9f9);
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 20px auto;
-    font-family: Arial, sans-serif;
-    transition: transform 0.3s, box-shadow 0.3s;
+.about-packages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .checklist{
-        list-style: disc;
-        margin-left: 20px;
-
-        .sub-checklist{
-            list-style: circle;
-            margin-left: 10px;
-        }
+    .button {
+      padding: 10px 30px;
+      text-decoration: none;
+      font-size: 1.4em;
+      margin: 15px 15px;
+      border-radius: 50px;
+      color: #f4f4f4;
+      transition: all 0.3s ease 0s;
     }
+    
+    .button:hover {
+      transform: scale(1.2);
+    }
+    
+    .button1 {
+      background-color: #00cc99;
+      box-shadow: 0 0 10px 0 #00cc99 inset, 0 0 20px 2px #00cc99;
+    }
+    
+    .button2 {
+      background-color: #ff007c;
+      box-shadow: 0 0 10px 0 #ff007c inset, 0 0 20px 2px #ff007c;
+    }
+    
+    .button3 {
+      background-color: #ffae42;
+      box-shadow: 0 0 10px 0 #ffae42 inset, 0 0 20px 2px #ffae42;
+    }
+    
+}
+
+.packages{
+    display: flex;
+    flex-direction: row;
+}
+
+.package {
+    background-color: #7f8381;
+    border-radius: 20px;
+    box-shadow: 0 19px 38px #434343, 0 15px 12px rgba(30, 35, 33, .2);
+    color: #f4f4f4;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding-bottom: 1.5em;
+    text-align: center;
+    width: 300px;
+    position: relative;
+  }
+
+  .pricing-package--heading{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   
-  .pricing-package:hover {
+  .package:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   }
   
-  /* Heading */
-  .pricing-package--heading h3 {
+  .heading h3 {
     font-size: 1.8rem;
     text-align: center;
     color: #333;
     margin-bottom: 10px;
   }
   
-  /* Description */
-  .pricing-package-description p {
+  .description p {
     font-size: 1rem;
     color: #666;
     text-align: center;
     margin-bottom: 20px;
   }
   
-  /* Features */
-  .pricing-featured_features {
-    margin-bottom: 20px;    
-    color: black;
+  .features .checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
   }
   
-  .pricing-featured_features__chart p {
-    font-size: 0.95rem;
-    color: #333;
+  .features .item {
     display: flex;
     align-items: center;
     margin: 10px 0;
   }
   
-  .pricing-featured_features__chart i {
+  .features .icon-check {
     color: #4caf50;
-    margin-right: 8px;
+    margin-right: 10px;
+  }
+
+  .toggle-checklist{
+    background: var(--white);
+    border: 0px solid var(--lighter-black);
+    border-radius: 40px;
+    width: 25px;
+    height: 25px;
   }
   
-  /* Feature Toggle Button */
-  .pricing-features__button {
-    background-color: transparent;
-    color: #007bff;
+  .features .has-sublist .toggle-btn {
+    background: none;
     border: none;
-    cursor: pointer;
-    font-size: 0.9rem;
+    color: #007bff;
+    font-size: 1rem;
     display: flex;
     align-items: center;
-    gap: 5px;
-    margin: 0 auto;
-    transition: color 0.3s;
+    cursor: pointer;
+    margin: 5px 0;
   }
   
-  .pricing-features__button:hover {
-    color: #0056b3;
+  .features .has-sublist .icon-plus {
+    margin-right: 5px;
+    font-size: 1.2rem;
   }
   
-  /* Price */
-  .pricing-package--price {
+  .features .sub-checklist {
+    list-style: circle;
+    margin-left: 20px;
+    display: none;
+  }
+  
+  .price {
     text-align: center;
     margin-bottom: 20px;
     font-size: 1.2rem;
     color: #333;
   }
   
-  .pricing-package--price b {
+  .price b {
     font-size: 2rem;
     color: #007bff;
   }
   
-  .pricing-package--price i {
+  .price i {
     font-size: 0.85rem;
     color: #888;
     display: block;
     margin-top: 5px;
   }
   
-  /* Buttons */
-  .pricing-package__buttons-wrapper {
+  .actions {
     text-align: center;
   }
   
-  .button-primary {
+  .btn-primary {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -116,12 +161,12 @@
     transition: background-color 0.3s, transform 0.2s;
   }
   
-  .button-primary:hover {
+  .btn-primary:hover {
     background-color: #0056b3;
     transform: scale(1.05);
   }
   
-  .button-link {
+  .btn-link {
     color: #007bff;
     font-size: 1rem;
     text-decoration: none;
@@ -129,36 +174,103 @@
     transition: color 0.3s;
   }
   
-  .button-link:hover {
+  .btn-link:hover {
     color: #0056b3;
     text-decoration: underline;
   }
-  
-.packages{
+
+  .checklist{
+    display: block;
+    text-align: left;
+    list-style: disc;
+  }
+
+  .sub-checklist{
+    list-style: circle;
+    margin-left: 15px;
+  }
+
+  .pricing-package{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-option-toggl-container{
     display: flex;
     flex-direction: row;
-}
+  }
 
-  /* Responsive Design */
-  @media (max-width: 600px) {
-    .packages{
+  @media(min-width: 750px){
+    .pricing-option-toggl-container, .toggle-checklist {
+        display: none; 
+    }    
+
+    .all-packages{
         display: flex;
+    }
+
+    .package{
+        width: 200px;    
+        justify-content: center;
+
+        .button{
+            font-size: 1.5rem;
+        }
+    }
+
+    .checklist{
+        display: block !important;
+    }
+
+    .button{
+        position: absolute;
+        bottom: 0;
+    }
+
+    .package{
+        min-height: 550px;
+    }
+  }
+
+@media (max-width: 1000px) {
+    .all-packages {
+        display: block;
+    }
+}
+  
+  /* Responsive Design */
+  @media (max-width: 750px) {
+    .package{
+        min-height: 350px;
+    }
+
+    .pricing-option-toggl-container, .toggle-checklist {
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+        gap: 10px;
+    }  
+
+    .packages {
         flex-direction: column;
     }
 
-    .pricing-package {
-      padding: 15px;
+    .package {
+        padding: 15px;
+        align-items: center;
+        justify-content: center;
     }
-  
-    .pricing-package--heading h3 {
+
+    .heading h3 {
       font-size: 1.6rem;
     }
   
-    .pricing-package--price b {
+    .price b {
       font-size: 1.8rem;
     }
   
-    .button-primary, .button-link {
+    .btn-primary, .btn-link {
       font-size: 0.9rem;
     }
   }
